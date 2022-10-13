@@ -12,7 +12,7 @@ def api_call(s_currency, d_currency):
     data_2 = data_1.get('rates')
     return data_2.get(str(d_currency))
 
-@app.route('/')
+
 @app.route('/')
 @app.route('/index/', methods=['POST', 'GET'])
 def index():
