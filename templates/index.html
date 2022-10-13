@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br>
+    <h1>Currency Converter</h1>
+    <br>
+    <p>Converts the value of a single unit of currency "First Currency" to the value of another currency "Second Currency".</p>
+    <br>
+    <p>
+    <form method="post" action="/index/">
+        <label for="source-currency">Select First Currency: </label>
+        <select id="source-currency" name="source-currency">
+            <option value="USD">USD - US Dollar</option>
+            <option value="BZD">BZD - Belize Dollar</option>
+            <option value="CAD">CAD - Canadian Dollar</option>
+            <option value="GBP">GBP - British Pound Sterling</option>
+            <option value="LBP">LBP - Lebanese Pound</option>
+            <option value="MXD">MXD - Mexican Peso</option>
+            <option value="ZMW">ZMW - Zambian Kwacha</option>
+        </select>    
+    </p>
+    <p>
+        <label for="destination-currency">Select Second Currency: </label>
+        <select id="destination-currency" name="destination-currency">
+            <option value="USD">USD - US Dollar</option>
+            <option value="BZD">BZD - Belize Dollar</option>
+            <option value="CAD">CAD - Canadian Dollar</option>
+            <option value="GBP">GBP - British Pound Sterling</option>
+            <option value="LBP">LBP - Lebanese Pound</option>
+            <option value="MXD">MXD - Mexican Peso</option>
+            <option value="ZMW">ZMW - Zambian Kwacha</option>
+        </select> 
+        <br>
+        <input type="submit" value="Submit"> 
+    </form>  
+    </p>
+    <p>
+        1 {{ s_currency }} = {{ out_response }} {{ d_currency }}
+    </p>
+{% endblock %}%          
